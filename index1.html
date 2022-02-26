@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task 40_1</title>
+    <link rel="stylesheet" href="/style1.css" />
+  </head>
+
+  <body>
+
+    <div class="container">
+      <form class="form" action="./form2.html" name="myForm" onsubmit="return validatorForm() ">
+       
+        <h1 class="register">Регистрация</h1>
+
+        <div class="input">
+          <input type="text" placeholder="логин" name="userLogin" />
+          <input type="password" placeholder="пароль" name="firstPass" />
+          <input type="password" placeholder="повторите пароль" name="secondPass" />
+          <button type="submit">ДАЛЕЕ</button>
+        </div>
+
+        <div class="error-block" id="error">
+          <p>Invalid</p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const btn = document.getElementById("btn");
+
+      btn(user);
+      function validateForm() {
+        const firstPass = document.myForm.firstPass.value;
+        const secondPass = document.myForm.secondPass.value;
+        const userName = document.myForm.userLogin.value;
+        const logError = document.getElementById("error");
+
+        console.log;
+
+        if (firstPass === secondPass) {
+          alert("success!!!");
+          window.location.href = "./form2.html";
+          return true;
+        } else if (firstPass.length < 6) {
+          alert("It is too");
+        } else {
+          alert("Error!!!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

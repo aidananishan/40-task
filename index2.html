@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task 40_2</title>
+    <link rel="stylesheet" href="/style2.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <form class="form" action="./form3.html" name="myForm" onsubmit="return validatorForm() ">
+        <h1 class="register">Регистрация, шаг 2</h1>
+
+        <div class="input">
+          <input type="text" placeholder="имя" name="userName" />
+          <input type="text" placeholder="фамилия" name="sureName" />
+          <input type="number" placeholder="возраст" name="ageUser"/>
+          <input type="text" placeholder="город" name="cityUser"/>
+          <button type="submit">ДАЛЕЕ</button>
+        </div>
+
+        <div class="error-block" id="error">
+          <p>Invalid</p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const btn = document.getElementById("btn");
+
+      btn(user);
+      function validateForm() {
+        const userName = document.myForm.userName.value;
+        const sureName = document.myForm.sureName.value;
+        const ageUser = document.myForm.ageUser.value;
+        const cityUser = document.myForm.cityUser.value;
+        
+        const logError = document.getElementById("error");
+
+        console.log;
+
+        if (sureName === cityUser) {
+          alert("success!!!");
+          window.location.href = "./form3.html";
+          return true;
+        } else if (sureName.length < 6) {
+          alert("It is too");
+        } else {
+          alert("Error!!!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
